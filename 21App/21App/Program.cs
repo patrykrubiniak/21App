@@ -1,6 +1,6 @@
 ﻿var name = "Ewa";
-var sex = "Mężczyzna";
-var age = 12;
+var sex = "Kobieta";
+var age = 34;
 
 if (sex == "Kobieta")
 {

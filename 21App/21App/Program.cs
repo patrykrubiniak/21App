@@ -14,7 +14,7 @@ if (sex == "Kobieta")
         Console.WriteLine("Kobieta poniżej 30 lat");
     }
 
-    else if (age > 30)
+    else
     {
         Console.WriteLine("Kobieta powyżej 30 lat");
     }

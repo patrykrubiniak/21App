@@ -16,14 +16,13 @@ employee2.AddScore(9);
 employee2.AddScore(3);
 employee2.AddScore(4);
 
-employee3.AddScore(9);
+employee3.AddScore(9); 
 employee3.AddScore(3);
 employee3.AddScore(5);
 employee3.AddScore(9);
 employee3.AddScore(10);
 
 List<Employee> employees = new List<Employee>()
-
 {
     employee1, employee2, employee3
 };
@@ -36,6 +35,7 @@ foreach (var employee in employees)
     if (employee.Result > maxResult)
     {
         employeeWithMaxResult = employee;
+        maxResult = employee.Result;
     }
 }
 

@@ -2,6 +2,12 @@
 class Employee
 {
     private List<int> score = new List<int>();
+
+    public Employee(string name)
+    {
+        Name = name;
+    }
+
     public Employee(string name, string surname, int age)
     {
         this.Name = name;
@@ -20,6 +26,9 @@ class Employee
             return this.score.Sum();
         }
     }
+
+    public object? Login { get; internal set; }
+
     public void AddScore(int value)
     {
         this.score.Add(value);

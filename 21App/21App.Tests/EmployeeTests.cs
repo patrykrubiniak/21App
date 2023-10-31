@@ -1,55 +1,55 @@
 namespace _21App.Tests
 {
-    public class TypeTests
+    public class EmployeeTests
     {
         [Test]
-        public void ComparedNumbers_AreNotEqual()
+        public void StatisticsMax()
         {
             //arrange
-            int number1 = 1;
-            int number2 = 2;
+            var employee = new Employee("Karol", "Kowalski");
+            employee.AddGrades(5);
+            employee.AddGrades(8);
+            employee.AddGrades(2);
 
             //act
+            var statistics = employee.GetStatistics();
+
             //assert
-            Assert.AreNotEqual(number1, number2);  
+            Assert.That(statistics.Max, Is.EqualTo(8));
 
         }
-        
+
         [Test]
-        public void TwoNames_AreTheSame()
+        public void StatisticsMin()
         {
-            
-            string name1 = "Karol";
-            string name2 = "Karol";
-                  
-            Assert.AreEqual(name1, name2);
+            var employee = new Employee("Karol", "Kowalski");
+            employee.AddGrades(5);
+            employee.AddGrades(8);
+            employee.AddGrades(2);
+
+            var statistics = employee.GetStatistics();
+
+            Assert.That(statistics.Min, Is.EqualTo(2));
 
         }
-       
+
         [Test]
-        public void ComparedEmployees_AreNotTheSame()
+        public void StatistsicsAverage()
         {
-            
-            var emp1oyee1 = GetEmployee("Karol", "Kowalski", 21);
-            var employee2 = GetEmployee("Adam", "Nowak", 34);
 
-            Assert.AreNotEqual(emp1oyee1, employee2);
+            var employee = new Employee("Karol", "Kowalski");
+            employee.AddGrades(5);
+            employee.AddGrades(8);
+            employee.AddGrades(2);
+
+            var statistics = employee.GetStatistics();
+
+            Assert.That(statistics.Average, Is.EqualTo(5));
 
         }
-        
-        [Test]
-        public void ComparedNumbers_AreEqual()
+        public Employee GetEmployee(string name, string surname)
         {
-            
-            float number1 = 999;
-            float number2 = 999;
-
-            Assert.AreEqual(number1, number2);
-
-        }
-        private Employee GetEmployee(string name, string surname, int age)
-        {                                           
-            return new Employee(name, surname, age);
+            return new Employee(name, surname);
         }
 
     }

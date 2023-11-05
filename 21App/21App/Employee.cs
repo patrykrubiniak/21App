@@ -56,23 +56,23 @@ public class Employee
         {
             case 'A':
             case 'a':
-                this.grades.Add(100);
+                AddGrades(100);
                 break;
             case 'B':
             case 'b':
-                this.grades.Add(80);
+                AddGrades(80);
                 break;
             case 'C':
             case 'c':
-                this.grades.Add(60);
+                AddGrades(60);
                 break;
             case 'D':
             case 'd':
-                this.grades.Add(40);
+                AddGrades(40);
                 break;
             case 'F':
             case 'f':
-                this.grades.Add(20);
+                AddGrades(20);
                 break;
             default:
                 Console.WriteLine("Niepoprawna wartość");

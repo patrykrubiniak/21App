@@ -15,7 +15,7 @@ namespace _21App.Tests
             var statistics = employee.GetStatistics();
 
             //assert
-            Assert.That(statistics.Max, Is.EqualTo(8));
+            Assert.That(statistics.Max, Is.EqualTo(80));
         }
 
         [Test]
@@ -23,12 +23,12 @@ namespace _21App.Tests
         {
             var employee = new Employee("Karol", "Kowalski");
             employee.AddGrades(50);
-            employee.AddGrades(8);
+            employee.AddGrades(80);
             employee.AddGrades(20);
 
             var statistics = employee.GetStatistics();
 
-            Assert.That(statistics.Min, Is.EqualTo(2));
+            Assert.That(statistics.Min, Is.EqualTo(20));
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace _21App.Tests
 
             var statistics = employee.GetStatistics();
 
-            Assert.That(statistics.Average, Is.EqualTo(5));
+            Assert.That(statistics.Average, Is.EqualTo(50));
         }
 
         [Test]
@@ -54,7 +54,7 @@ namespace _21App.Tests
 
             var statistics = employee.GetStatistics();
 
-            Assert.That(statistics.AverageLetter, Is.EqualTo('A'));
+            Assert.That(statistics.AverageLetter, Is.EqualTo('C'));
         }
         public Employee GetEmployee(string name, string surname)
         {

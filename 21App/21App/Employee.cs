@@ -3,7 +3,7 @@
 namespace _21App;
 public class Employee
 {
-    public List<float> grades = new List<float>();
+    private List<float> grades = new List<float>();
 
     public Employee()
     { 
@@ -25,7 +25,7 @@ public class Employee
 
         else
         {
-            Console.WriteLine("Niepoprawne dane");
+            throw new Exception ("Niepoprawne dane");
         }
     }
     public void AddGrades(double grade)
@@ -44,10 +44,9 @@ public class Employee
         {
             this.AddGrades(result);
         }
-
         else
         {
-            Console.WriteLine("String to nie jest float");
+            throw new Exception ("String to nie jest float");
         }
     }
     public void AddGrades(char grade)
@@ -75,8 +74,7 @@ public class Employee
                 AddGrades(20);
                 break;
             default:
-                Console.WriteLine("Niepoprawna wartość");
-                break;
+                throw new Exception ("Niepoprawna wartość");               
         }
     }
     public Statistics GetStatistics()

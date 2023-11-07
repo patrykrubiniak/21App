@@ -14,7 +14,14 @@ while (true)
     { 
         break; 
     }
-    employee.AddGrades(input);
+    try
+    {
+        employee.AddGrades(input);
+    }
+    catch (Exception exception)
+    { 
+        Console.WriteLine($"Znaleziono wyjątek: {exception.Message}"); 
+    }
 }
 
 var statistics = employee.GetStatistics();

@@ -2,16 +2,15 @@
 {
     public abstract class Person
     {
-        public Person(string name, string surname, char gender, int age)
+        public string Name { get; private set; }
+        public string Surname { get; private set; }
+        public char Sex { get; private set; }
+
+        public Person(string name, string surname, char sex)
         {
             this.Name = name;
             this.Surname = surname;
-            this.Gender = gender;
-            this.Age = age;
+            this.Sex = sex;
         }
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
-        public char Gender { get; private set; }
-        public int Age { get; private set; }
     }
 }

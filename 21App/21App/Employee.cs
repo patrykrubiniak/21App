@@ -1,17 +1,45 @@
 ﻿using System.ComponentModel.Design;
 
 namespace _21App;
-public class Employee : Person
+public class Employee : IEmployee
 {
     private List<float> grades = new List<float>();
 
-    public Employee (string name, string surname, char gender, int age)
-        :base (name, surname, gender, age)
-    { 
-
-    }   
+    public Employee(string name, string surname, int age)
+    {
+        this.Name = name;
+        this.Surname = surname;
+        this.Age = age;
+    }
     public string Name { get; private set; }
     public string Surname { get; private set; }
+    public char Gender { get; private set; }
+    public int Age { get; private set; }
+
+    public void AddGrade(float grade)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void AddGrade(string grade)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void AddGrade(long grade)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void AddGrade(double grade)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void AddGrade(char grade)
+    {
+        throw new NotImplementedException();
+    }
 
     public void AddGrades(float grade)
     {

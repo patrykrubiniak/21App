@@ -4,8 +4,8 @@ Console.WriteLine("Witamy w programie do oceny pracowników");
 Console.WriteLine("---------------------------------------");
 Console.WriteLine();
 
-var employee = new Employee("Karol", "Kowalski", 32);
-var supervisor = new Supervisor("Karol", "Kowalski", 'M', 32);
+var employee = new EmployeeInFile ("Karol", "Kowalski", 'M', 32);
+var supervisor = new Supervisor ("Karol", "Kowalski", 'M', 32);
 
 while (true)
 {
@@ -17,7 +17,7 @@ while (true)
     }
     try
     {
-        employee.AddGrades(input);
+        employee.AddGrade(input);
     }
     catch (Exception exception)
     { 

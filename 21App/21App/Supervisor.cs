@@ -21,22 +21,22 @@
             throw new NotImplementedException();
         }
 
-        public void AddGrade(string grade)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddGrade(long grade)
-        {
-            throw new NotImplementedException();
-        }
-
         public void AddGrade(double grade)
         {
             throw new NotImplementedException();
         }
 
+        public void AddGrade(int grade)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddGrade(char grade)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddGrade(string grade)
         {
             throw new NotImplementedException();
         }

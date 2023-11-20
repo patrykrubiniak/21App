@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace _21App.Tests
 {
     public class EmployeeTests
@@ -6,10 +8,10 @@ namespace _21App.Tests
         public void StatisticsMax()
         {
             //arrange
-            var employee = new Employee("Karol", "Kowalski");
-            employee.AddGrades(50);
-            employee.AddGrades(80);
-            employee.AddGrades(20);
+            var employee = new EmployeeInFile ("Karol", "Kowalski", 'M', 32);
+            employee.AddGrade(50);
+            employee.AddGrade(80);
+            employee.AddGrade(20);
 
             //act
             var statistics = employee.GetStatistics();
@@ -21,10 +23,10 @@ namespace _21App.Tests
         [Test]
         public void StatisticsMin()
         {
-            var employee = new Employee("Karol", "Kowalski");
-            employee.AddGrades(50);
-            employee.AddGrades(80);
-            employee.AddGrades(20);
+            var employee = new EmployeeInFile ("Karol", "Kowalski", 'M', 32);
+            employee.AddGrade(50);
+            employee.AddGrade(80);
+            employee.AddGrade(20);
 
             var statistics = employee.GetStatistics();
 
@@ -34,10 +36,10 @@ namespace _21App.Tests
         [Test]
         public void StatistsicsAverage()
         {
-            var employee = new Employee("Karol", "Kowalski");
-            employee.AddGrades(50);
-            employee.AddGrades(80);
-            employee.AddGrades(20);
+            var employee = new EmployeeInFile ("Karol", "Kowalski", 'M', 32);
+            employee.AddGrade(50);
+            employee.AddGrade(80);
+            employee.AddGrade(20);
 
             var statistics = employee.GetStatistics();
 
@@ -47,18 +49,18 @@ namespace _21App.Tests
         [Test]
         public void StatistsicsFinalGrade()
         {
-            var employee = new Employee("Karol", "Kowalski");
-            employee.AddGrades(50);
-            employee.AddGrades(80);
-            employee.AddGrades(20);
+            var employee = new EmployeeInFile ("Karol", "Kowalski", 'M', 32);
+            employee.AddGrade(50);
+            employee.AddGrade(80);
+            employee.AddGrade(20);
 
             var statistics = employee.GetStatistics();
 
             Assert.That(statistics.AverageLetter, Is.EqualTo('C'));
         }
-        public Employee GetEmployee(string name, string surname)
+        public EmployeeInFile GetEmployee (string name, string surname, char gender, int age)
         {
-            return new Employee(name, surname);
+            return new EmployeeInFile( name,  surname,  gender,  age);
         }
     }
 }

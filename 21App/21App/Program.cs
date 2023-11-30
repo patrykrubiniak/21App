@@ -1,11 +1,10 @@
 ﻿using _21App;
 
-
 Console.WriteLine("Witamy w programie do oceny pracowników");
 Console.WriteLine("---------------------------------------");
 Console.WriteLine();
 
-var employee = new EmployeeInMemory("Karol", "Kowalski", 'M', 32);
+var employee = new EmployeeInFile("Karol", "Kowalski", 'M', 32);
 employee.GradeAdded += EmployeeGradeAdded;
 
 //var supervisor = new Supervisor("Karol", "Kowalski", 'M', 32);
